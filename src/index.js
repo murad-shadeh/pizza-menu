@@ -102,7 +102,7 @@ const Pizza = ({ name, ingredients, price, photoName, soldOut }) => {
       <div>
         <h3>{name}</h3>
         <p>{ingredients}</p>
-        <span>{soldOut ? <span>SOLD OUT</span> : <span>{price}</span>}</span>
+        <span>{soldOut ? <span>SOLD OUT</span> : <span>${price}</span>}</span>
       </div>
     </li>
   );
