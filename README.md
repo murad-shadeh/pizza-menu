@@ -1,6 +1,6 @@
 # React Pizza App
 
-[view on Netlify](https://www.example.com)
+#### [View on Netlify](https://pizzawithreact.netlify.app/)
 
 ---
 
