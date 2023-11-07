@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
 
 * {
   margin: 0;
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   color: #252525;
   font-weight: 400;
   background-color: #f7f2e9;
@@ -24,7 +24,6 @@ body {
 .container {
   max-width: 80rem;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,12 +54,12 @@ body {
 .header h1::before,
 .header h1::after {
   display: block;
-  content: '';
+  content: "";
   height: 3px;
   width: 12rem;
   background-color: #edc84b;
   position: absolute;
-  top: calc(50% - 1px);
+  /* top: calc(50% - 1px); */
 }
 
 .header h1::before {
@@ -177,7 +176,60 @@ body {
 .btn:hover {
   background-color: #e9bb24;
 }
+/* Media query for all screen devices */
+@media (max-width: 460px) {
+  body {
+    font-size: 16px;
+  }
 
+  .container {
+    max-width: 100%;
+  }
+  .pizzas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bot-text {
+    text-align: center;
+  }
+  img {
+    margin-top: 10px;
+  }
+}
+@media (orientation: portrait) {
+  .pizzas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.8rem;
+  }
+  .open-para {
+    text-align: center;
+  }
+}
+@media (orientation: landscape) and (max-height: 900px) and (max-width: 600px) {
+  .pizzas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.8rem;
+  }
+  .open-para {
+    text-align: center;
+  }
+}
+/* @media (orientation: landscape) {
+  .pizzas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.8rem;
+  }
+} */
 /*
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128

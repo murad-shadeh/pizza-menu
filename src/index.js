@@ -99,7 +99,7 @@ const Pizza = ({ name, ingredients, price, photoName, soldOut }) => {
   return (
     <li className={`pizza ${soldOut ? "sold-out" : ""}`}>
       <img src={photoName} alt={name} />
-      <div>
+      <div className="responsive">
         <h3>{name}</h3>
         <p>{ingredients}</p>
         <span>{soldOut ? <span>SOLD OUT</span> : <span>${price}</span>}</span>
@@ -111,6 +111,7 @@ const Footer = () => {
   const hour = new Date().getHours();
   const openHour = 12;
   const closeHour = 22;
+
   const isOpen = hour >= openHour && hour <= closeHour;
   console.log(isOpen);
   //   if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
@@ -121,7 +122,7 @@ const Footer = () => {
       {isOpen ? (
         <Order closeHour={closeHour} openHour={openHour} />
       ) : (
-        <p>
+        <p className="bot-text">
           We're happy to welcome you between {openHour}:00 and {closeHour}:00
         </p>
       )}
@@ -131,7 +132,7 @@ const Footer = () => {
 const Order = ({ closeHour, openHour }) => {
   return (
     <div className="order">
-      <p>
+      <p className="open-para">
         We're open from {openHour}:00. until {closeHour}:00. Come visit us or
         order online.
       </p>
